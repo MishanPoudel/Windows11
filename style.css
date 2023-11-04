@@ -1,25 +1,26 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     /* background-image: url('bg.jpeg'); */
     background-size: cover;
     overflow: hidden;
     height: 100vh;
 }
 
-.taskbar{
+.taskbar {
     position: absolute;
     bottom: 0;
     display: flex;
     justify-content: center;
     width: 100%;
     background-color: #f3f3f3;
+    height: 5%;
 }
 
-.right{
+.right {
     justify-self: flex-end;
     position: absolute;
     right: 0;
@@ -27,7 +28,7 @@ body{
     height: 85%;
 }
 
-.startmenu{
+.startmenu {
     position: absolute;
     width: 100%;
     /* bottom: 50px; */
@@ -36,6 +37,29 @@ body{
     transition: all 0.3s ease-in;
 }
 
-.startmenu img{
-    border-radius: 8px;
+.startmenu img {
+    border-radius: 10px;
+}
+
+.taskbaricons img {
+    width: 48px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    /* border: 1px solid black; */
+}
+
+.search img{
+    height: 33px;
+    aspect-ratio: 1/1;
+    transform: scaleX(-1);
+}
+
+.edge img{
+    height: 30px;
+    aspect-ratio: 1/1;
+}
+
+.chrome img, .explorer img{
+    height: 37px;
+    aspect-ratio: 1/1;
 }

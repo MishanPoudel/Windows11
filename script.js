@@ -27,3 +27,18 @@ function updateTime() {
 
 updateTime();
 setInterval(updateTime, 1000);
+
+
+
+let free = document.querySelector(".free");
+let black = document.querySelector(".black");
+
+free.addEventListener("dblclick", () => {
+  console.log("CLICKED")
+  if (black.style.bottom === "-1000px") {
+    black.style.bottom = "10px";
+  }else {
+    black.style.bottom = "0px";
+  }
+});
+

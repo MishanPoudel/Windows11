@@ -13,7 +13,6 @@ start.addEventListener("click", ()=> {
 function updateTime() {
     const currentDateTime = new Date();
 
-    // Get the date in MM/DD/YYYY format
     const dateOptions = { month: '2-digit', day: '2-digit', year: 'numeric' };
     const date = currentDateTime.toLocaleDateString([], dateOptions);
 
@@ -27,5 +26,5 @@ function updateTime() {
     dateContainer.textContent = `${date}`;
 }
 
-updateTime(); // Call the function immediately to display the time and date
-setInterval(updateTime, 1000); // Update time and date every second
+updateTime(); 
+setInterval(updateTime, 1000); 

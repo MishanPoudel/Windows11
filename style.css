@@ -14,19 +14,23 @@ body {
     position: absolute;
     bottom: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     height: 5vh;
     background-color: #f3f3f3;
 }
 
+.left {
+    width: 30vh;
+}
+
+.mid {
+    display: flex;
+    align-items: center;
+}
+
 .right {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end; 
-    align-items: flex-end; 
-    height: 100vh; 
-
 }
 
 .startmenu {
@@ -49,29 +53,33 @@ body {
     /* border: 1px solid black; */
 }
 
-.search img{
-    height: 33px;
+.start img {
+    height: 27px;
+    aspect-ratio: 1/1;
+    padding: 10px 0px;
+}
+
+.search img {
+    height: 27px;
     aspect-ratio: 1/1;
     transform: scaleX(-1);
-    padding-top: 10px;
-    padding-bottom:5px;
+    padding: 10px 0px;
 }
 
-.edge img{
-    padding-top: 10px;
-    padding-bottom:8px;
-    height: 30px;
+.edge img {
+    padding: 10px 0px;
+    height: 27px;
     aspect-ratio: 1/1;
 }
 
-.chrome img, .explorer img{
-    height: 37px;
-    padding-top: 6px;
+.chrome img,
+.explorer img {
+    padding: 10px 0px;
+    height: 27px;
     aspect-ratio: 1/1;
-    padding-bottom:5px;
 }
 
-.arrow img{
+.arrow img {
     height: 17px;
     padding: 12px 3px;
     aspect-ratio: 1/1;
@@ -80,7 +88,8 @@ body {
 .Cpanel img,
 .notification img {
     /* border: 1px solid black; */
-    height: 20px; 
+    height: 20px;
+    /* Adjust height as needed */
     padding: 12px 3px;
     aspect-ratio: 1/1;
 }
@@ -95,6 +104,7 @@ body {
     /* border: 1px solid black; */
     padding: 5px;
     margin: -5px;
+    text-align: right;
 }
 
 .arrow,
@@ -102,5 +112,18 @@ body {
 .notification {
     display: flex;
     align-items: center;
-    margin: 0 4px;
+    margin: 0 3px;
+}
+
+.taskbaricons :hover,
+.right :hover {
+    background-color: rgb(198, 198, 198);
+    opacity: 100%;
+    border-radius: 5px;
+}
+
+.show button {
+    height: 5vh;
+    width: 1.5vh;
+    border-radius: 5px;
 }

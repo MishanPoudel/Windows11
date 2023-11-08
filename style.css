@@ -25,6 +25,7 @@ body {
 
 .left {
     width: 30vh;
+    
 }
 
 .mid {
@@ -39,7 +40,6 @@ body {
 .startmenu {
     position: absolute;
     width: 100%;
-    /* bottom: 50px; */
     bottom: -660px;
     text-align: center;
     transition: all 0.3s ease-in;
@@ -85,9 +85,7 @@ body {
 
 .Cpanel img,
 .notification img {
-    /* border: 1px solid black; */
     height: 20px;
-    /* Adjust height as needed */
     padding: 12px 3px;
     aspect-ratio: 1/1;
 }
@@ -107,30 +105,40 @@ body {
     font-size: 12px;
 }
 
-.arrow,
-.Cpanel,
-.notification {
+.taskbar .arrow,
+.taskbar .Cpanel,
+.taskbar .notification {
     display: flex;
     align-items: center;
     margin: 0 3px;
-    pointer-events: none;
+    pointer-events: auto;
 }
 
-.taskbaricons :hover,
-.right :hover,
-.container :hover{
+.taskbar .arrow:hover,
+.taskbar .Cpanel:hover,
+.taskbar .notification:hover,
+.taskbar .taskbaricons:hover,
+.container:hover{
     background-color: rgb(198, 198, 198);
     opacity: 100%;
     border-radius: 8px;
+}
+
+.show:hover{
+    background-color: rgb(198, 198, 198);
+    opacity: 100%;
+    border-radius: 8px;
+    border-left: 1px solid grey;
 }
 
 .show button {
     height: 5vh;
     width: 1.5vh;
     border-radius: 5px;
+    border: 0;
 }
 
-.home{
+.home {
     display: flex;
     /* border: 1px solid red; */
     flex-direction: column;
@@ -138,26 +146,28 @@ body {
     width: 100vh;
     position: absolute;
     padding: 5px 7px;
-}
-
-.container{
-    /* border: 1px solid red; */
-    width: 9vh;
-    margin-top: 1px;
-    text-align: center;
-}
-
-.container img{
-    user-select: none;
-    pointer-events: auto;
-}
-
-.name{
     user-select: none;
     font-size: smaller;
 }
 
-.wrapper {
+.home .container {
+    /* border: 1px solid red; */
+    width: 9vh;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.home .container img {
+    user-select: none;
+    pointer-events: auto;
+}
+
+.home .bin img{
+    height: 40px;
+    aspect-ratio: 1/1;
+}
+
+.black .wrapper {
     position: absolute;
     height: 40%;
     width: 45vh;
@@ -171,16 +181,16 @@ body {
     background-color: #e7e7e7;
 }
 
-.black{
+.black {
     background-color: black;
     height: 100%;
     width: 100%;
     position: absolute;
-    bottom:-1000px;
+    bottom: -1000px;
 }
 
 
-.wrapper p{
+.black .wrapper p {
     color: black;
     font-size: 23px;
     font-weight: 500;
@@ -188,13 +198,28 @@ body {
 
 }
 
-.wrapper header{
+.black .wrapper header {
     padding: 10px 25px;
     font-size: 16px;
     font-weight: 500;
 }
 
-.content img{
+.black .close {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 20px;
+    padding: 10px;
+    /* aspect-ratio: 1/1; */
+    /* border: 1px solid black; */
+}
+
+.black .close:hover {
+    background-color: rgb(241, 47, 47);
+    border-radius: 0px 5px 0 0;
+}
+
+.black .content img {
     height: 50px;
     aspect-ratio: 1/1;
     transform: scaleX(-1);
@@ -203,22 +228,22 @@ body {
     padding-right: 25px;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
-.title{
+.black .wrapper .title {
     font-size: 20px;
     padding: 30px 0px;
     font-weight: 500;
 }
 
-.discription{
+.black .wrapper .discription {
     padding: 10px 25px;
     /* border: 1px solid black; */
 }
 
-a{
+.black .wrapper a {
     text-decoration: none;
     padding-top: 20px;
     padding-left: 25px;
@@ -228,19 +253,19 @@ a{
     display: block;
 }
 
-.content{
+.black .wrapper .content {
     /* border: 1px solid black; */
     padding-bottom: 30px;
     background-color: white;
 }
 
-.decision{
+.black .wrapper .decision {
     /* border: 1px solid red; */
     width: auto;
     display: flex;
 }
 
-button.b1{
+.black .wrapper button.b1 {
     width: 50%;
     margin: 20px 5px;
     margin-left: 20px;
@@ -252,7 +277,7 @@ button.b1{
     border-radius: 5px;
 }
 
-button.b2{
+.black .wrapper button.b2 {
     width: 50%;
     margin: 20px 10px;
     margin-right: 20px;
@@ -265,9 +290,111 @@ button.b2{
     border-radius: 5px;
 }
 
-button.b1:hover,
-button.b2:hover{
-    outline: 2px solid black; 
-    outline-offset: 5px; 
+.black .wrapper button.b1:hover,
+.black .wrapper button.b2:hover {
+    outline: 2px solid black;
+    outline-offset: 5px;
     border-radius: 5px;
+}
+
+
+.malware {
+    background-color: black;
+    top: 150%;
+    left: 50%;
+    position: absolute;
+    transition-delay: 0.2s;
+}
+
+.malware .wrapper {
+    position: absolute;
+    height: 40vh;
+    aspect-ratio: 1/1;
+    user-select: none;
+    pointer-events: auto;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background: rgb(251, 193, 245);
+}
+
+.malware .wrapper header {
+    font-size: medium;
+    padding: 5px 10px;
+}
+
+.malware .content {
+    background-color: white;
+    padding: 20px;
+    margin: 3px;
+    text-align: center;
+    font-size: larger;
+}
+
+.malware .box {
+    width: 30vh;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.malware .close {
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 21px;
+    padding: 5px;
+    aspect-ratio: 1/1;
+}
+
+.malware .close:hover {
+    background-color: rgb(241, 47, 47);
+    border-radius: 0px 5px 0 0;
+}
+
+.malware table {
+    padding-top: 10px;
+}
+
+.malware button {
+    margin: 30px;
+    height: 40px;
+    width: 100px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 3px;
+    color: #000;
+    background: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    transition-duration: .15s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+
+}
+
+.malware button:hover {
+    background: rgb(251, 193, 245);
+}
+
+.malware input {
+    border: 0;
+    font-weight: 500;
+    padding-left: 5px;
+    border-bottom: 1px solid black;
+    height: 30px;
+}
+
+.malware .content img{
+    /* border: 1px solid black; */
+    height: 300px;
+    aspect-ratio: 1/1;
 }

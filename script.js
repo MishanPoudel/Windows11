@@ -32,13 +32,33 @@ setInterval(updateTime, 1000);
 
 let free = document.querySelector(".free");
 let black = document.querySelector(".black");
+let error = new Audio('/sounds/error.mp3');
 
 free.addEventListener("dblclick", () => {
-  console.log("CLICKED")
-  if (black.style.bottom === "-1000px") {
-    black.style.bottom = "10px";
-  }else {
     black.style.bottom = "0px";
-  }
+    error.play();
 });
 
+let no = document.querySelector(".black .b2");
+let yes = document.querySelector(".black .b1");
+let close = document.querySelector(".black .close");
+let close1 = document.querySelector(".malware .close");
+let malware = document.querySelector(".malware");
+let submit = document.querySelector(".malware button");
+
+function closeBlack(){
+  black.style.bottom = "-1000px";
+}
+
+no.addEventListener("click", closeBlack);
+close.addEventListener("click", closeBlack);
+yes.addEventListener("click", () => {
+  closeBlack();
+  malware.style.top = "50%";
+});
+close1.addEventListener("click", ()=> {
+  malware.style.top = "150%";
+});
+submit.addEventListener("click", ()=> {
+  malware.style.top = "150%";
+});

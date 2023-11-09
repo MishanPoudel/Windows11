@@ -5,20 +5,21 @@
 }
 
 body {
-    /* background-image: url('bg.jpeg'); */
+    background-image: url('/images/bg.jpg');
     background-size: cover;
     overflow: hidden;
     height: 100vh;
+    color: white;
 }
 
 .taskbar {
     position: absolute;
-    bottom: 0;
+    top: 95%;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 5vh;
-    background-color: #f3f3f3;
+    background-color: #292929;
     user-select: none;
     pointer-events: auto;
 }
@@ -63,7 +64,7 @@ body {
 }
 
 .search img {
-    height: 27px;
+    height: 22px;
     aspect-ratio: 1/1;
     transform: scaleX(-1);
     padding: 10px 0px;
@@ -78,14 +79,22 @@ body {
 }
 
 .arrow img {
-    height: 17px;
+    height: 19px;
     padding: 12px 3px;
     aspect-ratio: 1/1;
+    transform: rotate(90deg);
+}
+
+.speaker img {
+    height: 11px;
+    padding: 12px 3px;
+    aspect-ratio: 1/1;
+    transform: rotate(90deg);
 }
 
 .Cpanel img,
 .notification img {
-    height: 20px;
+    height: 19px;
     padding: 12px 3px;
     aspect-ratio: 1/1;
 }
@@ -94,13 +103,14 @@ body {
     display: flex;
     flex-direction: column;
     user-select: none;
+    padding: 0 6px;
 }
 
 .date,
 .time {
     /* border: 1px solid black; */
     padding: 5px;
-    margin: -5px;
+    margin: -10px;
     text-align: right;
     font-size: 12px;
 }
@@ -119,7 +129,7 @@ body {
 .taskbar .notification:hover,
 .taskbar .taskbaricons:hover,
 .container:hover{
-    background-color: rgb(198, 198, 198);
+    background-color: #363636;
     opacity: 100%;
     border-radius: 8px;
 }
@@ -136,6 +146,7 @@ body {
     width: 1.5vh;
     border-radius: 5px;
     border: 0;
+    background-color: #202125;
 }
 
 .home {
@@ -155,6 +166,7 @@ body {
     width: 9vh;
     margin-top: 4px;
     text-align: center;
+    padding-top: 10px;
 }
 
 .home .container img {
@@ -178,7 +190,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
-    background-color: #e7e7e7;
+    background-color: #3d3d3d;
 }
 
 .black {
@@ -187,11 +199,11 @@ body {
     width: 100%;
     position: absolute;
     bottom: -1000px;
+    
 }
 
 
 .black .wrapper p {
-    color: black;
     font-size: 23px;
     font-weight: 500;
     padding: 10px 25px;
@@ -232,13 +244,13 @@ body {
     display: flex;
 }
 
-.black .wrapper .title {
+.black .title {
     font-size: 20px;
     padding: 30px 0px;
     font-weight: 500;
 }
 
-.black .wrapper .discription {
+.black .discription {
     padding: 10px 25px;
     /* border: 1px solid black; */
 }
@@ -253,19 +265,19 @@ body {
     display: block;
 }
 
-.black .wrapper .content {
+.black .content {
     /* border: 1px solid black; */
     padding-bottom: 30px;
-    background-color: white;
+    background-color: #1f1f1f;
 }
 
-.black .wrapper .decision {
+.black .decision {
     /* border: 1px solid red; */
     width: auto;
     display: flex;
 }
 
-.black .wrapper button.b1 {
+.black button.b1 {
     width: 50%;
     margin: 20px 5px;
     margin-left: 20px;
@@ -277,16 +289,14 @@ body {
     border-radius: 5px;
 }
 
-.black .wrapper button.b2 {
+.black button.b2 {
     width: 50%;
     margin: 20px 10px;
     margin-right: 20px;
     height: 35px;
     background-color: #0067c0;
     border: 0;
-    color: white;
     font-size: 15px;
-    font-weight: 500;
     border-radius: 5px;
 }
 
@@ -304,6 +314,7 @@ body {
     left: 50%;
     position: absolute;
     transition-delay: 0.2s;
+    color: black;
 }
 
 .malware .wrapper {

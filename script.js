@@ -29,6 +29,8 @@ updateTime();
 setInterval(updateTime, 1000);
 
 let free = document.querySelector(".free");
+let flower = document.querySelector(".flower");
+let flowers = document.querySelector(".flowers");
 let black = document.querySelector(".black");
 let error = new Audio("/sounds/error.mp3");
 
@@ -43,6 +45,7 @@ let close = document.querySelector(".black .close");
 let close1 = document.querySelector(".malware .close");
 let malware = document.querySelector(".malware");
 let submit = document.querySelector(".malware button");
+let x = document.querySelector(".close")
 
 function closeBlack() {
   black.style.bottom = "-1000px";
@@ -59,4 +62,37 @@ close1.addEventListener("click", () => {
 });
 submit.addEventListener("click", () => {
   malware.style.top = "150%";
+});
+
+flower.addEventListener("dblclick", ()=>{
+  if( flowers.style.display == "none" ){
+    flowers.style.display = "block";
+  }else{
+    flowers.style.display = "none";
+  }
+});
+
+const wrapper = document.querySelector(".wrapper");
+const topElement = wrapper.querySelector(".top");
+
+function onDrag({ movementX, movementY }) {
+  let getStyle = window.getComputedStyle(wrapper);
+  let left = parseInt(getStyle.left);
+  let currentTop = parseInt(getStyle.top);
+  wrapper.style.left = `${left + movementX}px`;
+  wrapper.style.top = `${currentTop + movementY}px`;
+}
+
+topElement.addEventListener("mousedown", () => {
+  document.addEventListener("mousemove", onDrag);
+
+  document.addEventListener("mouseup", () => {
+    document.removeEventListener("mousemove", onDrag);
+  });
+});
+
+x.addEventListener("click",()=>{
+  if(flowers.style.display = "block"){
+    flowers.style.display = "none";
+  }
 });

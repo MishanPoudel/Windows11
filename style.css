@@ -1,411 +1,477 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI Variable", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+    sans-serif;
 }
 
 body {
-    background-image: url('/images/bg.jpg');
-    background-size: cover;
-    overflow: hidden;
-    height: 100vh;
-    color: white;
+  background-image: url("/images/bg.jpg");
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+  color: white;
 }
 
 .taskbar {
-    position: absolute;
-    top: 95%;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 5vh;
-    background-color: #292929;
-    user-select: none;
-    pointer-events: auto;
+  position: absolute;
+  top: 95%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 5vh;
+  background-color: #292929;
+  user-select: none;
+  pointer-events: auto;
 }
 
 .left {
-    width: 30vh;
-    
+  width: 30vh;
 }
 
 .mid {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .right {
-    display: flex;
+  display: flex;
 }
 
 .startmenu {
-    position: absolute;
-    width: 100%;
-    bottom: -660px;
-    text-align: center;
-    transition: all 0.3s ease-in;
+  position: absolute;
+  width: 100%;
+  bottom: -660px;
+  text-align: center;
+  transition: all 0.3s ease-in;
 }
 
 .startmenu img {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .taskbaricons img {
-    width: 48px;
-    aspect-ratio: 1/1;
-    object-fit: contain;
-    /* border: 1px solid black; */
+  width: 48px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  /* border: 1px solid black; */
 }
 
 .start img {
-    height: 27px;
-    aspect-ratio: 1/1;
-    padding: 10px 0px;
+  height: 27px;
+  aspect-ratio: 1/1;
+  padding: 10px 0px;
 }
 
 .search img {
-    height: 22px;
-    aspect-ratio: 1/1;
-    transform: scaleX(-1);
-    padding: 10px 0px;
+  height: 22px;
+  aspect-ratio: 1/1;
+  transform: scaleX(-1);
+  padding: 10px 0px;
 }
 
 .edge img,
 .store img,
 .explorer img {
-    padding: 10px 0px;
-    height: 27px;
-    aspect-ratio: 1/1;
+  padding: 10px 0px;
+  height: 27px;
+  aspect-ratio: 1/1;
 }
 
 .arrow img {
-    height: 19px;
-    padding: 12px 3px;
-    aspect-ratio: 1/1;
-    transform: rotate(90deg);
+  height: 19px;
+  padding: 12px 3px;
+  aspect-ratio: 1/1;
+  transform: rotate(90deg);
 }
 
 .speaker img {
-    height: 11px;
-    padding: 12px 3px;
-    aspect-ratio: 1/1;
-    transform: rotate(90deg);
+  height: 11px;
+  padding: 12px 3px;
+  aspect-ratio: 1/1;
+  transform: rotate(90deg);
 }
 
 .Cpanel img,
 .notification img {
-    height: 19px;
-    padding: 12px 3px;
-    aspect-ratio: 1/1;
+  height: 19px;
+  padding: 12px 3px;
+  aspect-ratio: 1/1;
 }
 
 .datetime {
-    display: flex;
-    flex-direction: column;
-    user-select: none;
-    padding: 0 6px;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  padding: 0 6px;
 }
 
 .date,
 .time {
-    /* border: 1px solid black; */
-    padding: 5px;
-    margin: -10px;
-    text-align: right;
-    font-size: 12px;
+  /* border: 1px solid black; */
+  padding: 5px;
+  margin: -10px;
+  text-align: right;
+  font-size: 12px;
 }
 
 .taskbar .arrow,
 .taskbar .Cpanel,
 .taskbar .notification {
-    display: flex;
-    align-items: center;
-    margin: 0 3px;
-    pointer-events: auto;
+  display: flex;
+  align-items: center;
+  margin: 0 3px;
+  pointer-events: auto;
 }
 
 .taskbar .arrow:hover,
 .taskbar .Cpanel:hover,
 .taskbar .notification:hover,
 .taskbar .taskbaricons:hover,
-.container:hover{
-    background-color: #363636;
-    opacity: 100%;
-    border-radius: 8px;
+.container:hover {
+  background-color: #363636;
+  opacity: 100%;
+  border-radius: 8px;
 }
 
-.show:hover{
-    background-color: rgb(198, 198, 198);
-    opacity: 100%;
-    border-radius: 8px;
-    border-left: 1px solid grey;
+.show:hover {
+  background-color: rgb(198, 198, 198);
+  opacity: 100%;
+  border-radius: 8px;
+  border-left: 1px solid grey;
 }
 
 .show button {
-    height: 5vh;
-    width: 1.5vh;
-    border-radius: 5px;
-    border: 0;
-    background-color: #202125;
+  height: 5vh;
+  width: 1.5vh;
+  border-radius: 5px;
+  border: 0;
+  background-color: #202125;
 }
 
 .home {
-    display: flex;
-    /* border: 1px solid red; */
-    flex-direction: column;
-    height: 100vh;
-    width: 100vh;
-    position: absolute;
-    padding: 5px 7px;
-    user-select: none;
-    font-size: smaller;
+  display: flex;
+  /* border: 1px solid red; */
+  flex-direction: column;
+  height: 100vh;
+  width: 100vh;
+  position: absolute;
+  padding: 5px 7px;
+  user-select: none;
+  font-size: smaller;
 }
 
 .home .container {
-    /* border: 1px solid red; */
-    width: 9vh;
-    margin-top: 4px;
-    text-align: center;
-    padding-top: 10px;
+  /* border: 1px solid red; */
+  width: 9vh;
+  margin-top: 4px;
+  text-align: center;
+  padding-top: 5px;
 }
 
 .home .container img {
-    user-select: none;
-    pointer-events: auto;
+  user-select: none;
+  pointer-events: auto;
 }
 
-.home .bin img{
-    height: 40px;
-    aspect-ratio: 1/1;
+.home .bin img {
+  height: 40px;
+  aspect-ratio: 1/1;
+}
+
+.home .flower img {
+  height: 55px;
+  aspect-ratio: 1/1;
 }
 
 .black .wrapper {
-    position: absolute;
-    height: 40%;
-    width: 45vh;
-    user-select: none;
-    pointer-events: auto;
-    background-color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    background-color: #3d3d3d;
+  position: absolute;
+  height: 40%;
+  width: 45vh;
+  user-select: none;
+  pointer-events: auto;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-color: #3d3d3d;
 }
 
 .black {
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    bottom: -1000px;
-    
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: -1000px;
 }
 
-
 .black .wrapper p {
-    font-size: 23px;
-    font-weight: 500;
-    padding: 10px 25px;
-
+  font-size: 23px;
+  font-weight: 500;
+  padding: 10px 25px;
 }
 
 .black .wrapper header {
-    padding: 10px 25px;
-    font-size: 16px;
-    font-weight: 500;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .black .close {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    height: 20px;
-    padding: 10px;
-    /* aspect-ratio: 1/1; */
-    /* border: 1px solid black; */
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 20px;
+  padding: 10px;
+  /* aspect-ratio: 1/1; */
+  /* border: 1px solid black; */
 }
 
 .black .close:hover {
-    background-color: rgb(241, 47, 47);
-    border-radius: 0px 5px 0 0;
+  background-color: rgb(241, 47, 47);
+  border-radius: 0px 5px 0 0;
 }
 
 .black .content img {
-    height: 50px;
-    aspect-ratio: 1/1;
-    transform: scaleX(-1);
-    padding: 10px;
-    padding-top: 20px;
-    padding-right: 25px;
+  height: 50px;
+  aspect-ratio: 1/1;
+  transform: scaleX(-1);
+  padding: 10px;
+  padding-top: 20px;
+  padding-right: 25px;
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .black .title {
-    font-size: 20px;
-    padding: 30px 0px;
-    font-weight: 500;
+  font-size: 20px;
+  padding: 30px 0px;
+  font-weight: 500;
 }
 
 .black .discription {
-    padding: 10px 25px;
-    /* border: 1px solid black; */
+  padding: 10px 25px;
+  /* border: 1px solid black; */
 }
 
 .black .wrapper a {
-    text-decoration: none;
-    padding-top: 20px;
-    padding-left: 25px;
-    color: #0073ff;
-    font-weight: 600;
-    /* border: 1px solid red; */
-    display: block;
+  text-decoration: none;
+  padding-top: 20px;
+  padding-left: 25px;
+  color: #0073ff;
+  font-weight: 600;
+  /* border: 1px solid red; */
+  display: block;
 }
 
 .black .content {
-    /* border: 1px solid black; */
-    padding-bottom: 30px;
-    background-color: #1f1f1f;
+  /* border: 1px solid black; */
+  padding-bottom: 30px;
+  background-color: #1f1f1f;
 }
 
 .black .decision {
-    /* border: 1px solid red; */
-    width: auto;
-    display: flex;
+  /* border: 1px solid red; */
+  width: auto;
+  display: flex;
 }
 
 .black button.b1 {
-    width: 50%;
-    margin: 20px 5px;
-    margin-left: 20px;
-    height: 35px;
-    background-color: white;
-    border: 0;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 5px;
+  width: 50%;
+  margin: 12px 5px;
+  margin-left: 20px;
+  height: 35px;
+  background-color: white;
+  border: 0;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
 }
 
 .black button.b2 {
-    width: 50%;
-    margin: 20px 10px;
-    margin-right: 20px;
-    height: 35px;
-    background-color: #0067c0;
-    border: 0;
-    font-size: 15px;
-    border-radius: 5px;
+  width: 50%;
+  margin: 12px 5px;
+  margin-right: 20px;
+  height: 35px;
+  background-color: #0067c0;
+  border: 0;
+  font-size: 15px;
+  border-radius: 5px;
 }
 
 .black .wrapper button.b1:hover,
 .black .wrapper button.b2:hover {
-    outline: 2px solid black;
-    outline-offset: 5px;
-    border-radius: 5px;
+  outline: 2px solid black;
+  outline-offset: 5px;
+  border-radius: 5px;
 }
 
-
 .malware {
-    background-color: black;
-    top: 150%;
-    left: 50%;
-    position: absolute;
-    transition-delay: 0.2s;
-    color: black;
+  background-color: black;
+  top: 150%;
+  left: 50%;
+  position: absolute;
+  transition-delay: 0.2s;
+  color: black;
 }
 
 .malware .wrapper {
-    position: absolute;
-    height: 40vh;
-    aspect-ratio: 1/1;
-    user-select: none;
-    pointer-events: auto;
-    background-color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    background: rgb(251, 193, 245);
+  position: absolute;
+  height: 45vh;
+  aspect-ratio: 1/1;
+  user-select: none;
+  pointer-events: auto;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background: rgb(251, 193, 245);
 }
 
 .malware .wrapper header {
-    font-size: medium;
-    padding: 5px 10px;
+  font-size: medium;
+  padding: 5px 10px;
 }
 
 .malware .content {
-    background-color: white;
-    padding: 20px;
-    margin: 3px;
-    text-align: center;
-    font-size: larger;
+  background-color: white;
+  padding: 20px;
+  margin: 3px;
+  text-align: center;
+  font-size: larger;
 }
 
 .malware .box {
-    width: 30vh;
-    font-size: 17px;
-    font-weight: 600;
+  width: 30vh;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 .malware .close {
-    /* border: 1px solid black; */
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 21px;
+  padding: 5px;
+  aspect-ratio: 1/1;
+}
+
+.malware .close:hover {
+  background-color: rgb(241, 47, 47);
+  border-radius: 0px 5px 0 0;
+}
+
+.malware table {
+  padding-top: 10px;
+}
+
+.malware button {
+  margin: 30px;
+  height: 40px;
+  width: 100px;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 3px;
+  color: #000;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+  transition-duration: 0.15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.malware button:hover {
+  background: rgb(251, 193, 245);
+}
+
+.malware input {
+  border: 0;
+  font-weight: 500;
+  padding-left: 5px;
+  border-bottom: 1px solid black;
+  height: 30px;
+}
+
+.malware .content img {
+  /* border: 1px solid black; */
+  height: 300px;
+  aspect-ratio: 1/1;
+}
+
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 100%;
+}
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  border: 0;
+  height: 90vh;
+  width: 100%;
+}
+
+.flowers {
+  background-color: black;
+  top: 10px;
+  left: 10vh;
+  position: absolute;
+  transition-delay: 0.2s;
+  width: 90%;
+  display: none;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.flowers .wrapper header {
+  font-size: large;
+  padding: 5px 10px;
+}
+
+.flowers .wrapper {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    height: 21px;
+    left: 0;
+    top: 0;
+    height: 90vh;
+    width: 100%;
+}
+
+.top{
+    background-color: black;
+}
+
+.close,
+.maxi,
+.mini {
+    height: 18px;
     padding: 5px;
     aspect-ratio: 1/1;
 }
 
-.malware .close:hover {
+.close:hover {
+  background-color: rgb(241, 47, 47);
+  border-radius: 0px 5px 0 0;
+}
+
+.maxi:hover,
+.mini:hover {
     background-color: rgb(241, 47, 47);
-    border-radius: 0px 5px 0 0;
+    border-radius: 0;
 }
 
-.malware table {
-    padding-top: 10px;
-}
-
-.malware button {
-    margin: 30px;
-    height: 40px;
-    width: 100px;
-    /* border: 1px solid black; */
-    border-radius: 5px;
-    display: inline-block;
-    outline: 0;
-    cursor: pointer;
-    border: 1px solid #000;
-    border-radius: 3px;
-    color: #000;
-    background: #fff;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 28px;
-    text-align: center;
-    transition-duration: .15s;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-
-}
-
-.malware button:hover {
-    background: rgb(251, 193, 245);
-}
-
-.malware input {
-    border: 0;
-    font-weight: 500;
-    padding-left: 5px;
-    border-bottom: 1px solid black;
-    height: 30px;
-}
-
-.malware .content img{
-    /* border: 1px solid black; */
-    height: 300px;
-    aspect-ratio: 1/1;
+.top{
+    justify-content: space-between;
 }

@@ -45,6 +45,8 @@ let close = document.querySelector(".black .close");
 let close1 = document.querySelector(".malware .close");
 let malware = document.querySelector(".malware");
 let submit = document.querySelector(".malware button");
+let explorer = document.querySelector(".explorer");
+let fexplorer = document.querySelector(".fexplorer");
 let x = document.querySelector(".close")
 
 function closeBlack() {
@@ -72,27 +74,38 @@ flower.addEventListener("dblclick", ()=>{
   }
 });
 
-const wrapper = document.querySelector(".wrapper");
-const topElement = wrapper.querySelector(".top");
-
-function onDrag({ movementX, movementY }) {
-  let getStyle = window.getComputedStyle(wrapper);
-  let left = parseInt(getStyle.left);
-  let currentTop = parseInt(getStyle.top);
-  wrapper.style.left = `${left + movementX}px`;
-  wrapper.style.top = `${currentTop + movementY}px`;
-}
-
-topElement.addEventListener("mousedown", () => {
-  document.addEventListener("mousemove", onDrag);
-
-  document.addEventListener("mouseup", () => {
-    document.removeEventListener("mousemove", onDrag);
-  });
+explorer.addEventListener("click",()=>{
+  if( fexplorer.style.display == "none" ){
+    fexplorer.style.display = "block";
+  }else{
+    fexplorer.style.display = "none";
+  }
 });
 
+
+
+// const wrapper = document.querySelector(".wrapper");
+// const topElement = wrapper.querySelector(".top");
+
+// function onDrag({ movementX, movementY }) {
+//   let getStyle = window.getComputedStyle(wrapper);
+//   let left = parseInt(getStyle.left);
+//   let currentTop = parseInt(getStyle.top);
+//   wrapper.style.left = `${left + movementX}px`;
+//   wrapper.style.top = `${currentTop + movementY}px`;
+// }
+
+// topElement.addEventListener("mousedown", () => {
+//   document.addEventListener("mousemove", onDrag);
+
+//   document.addEventListener("mouseup", () => {
+//     document.removeEventListener("mousemove", onDrag);
+//   });
+// });
+
 x.addEventListener("click",()=>{
-  if(flowers.style.display = "block"){
+  if (flowers.style.display === "block" || fexplorer.style.display === "block") {
     flowers.style.display = "none";
+    fexplorer.style.display = "none";
   }
 });
